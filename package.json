@@ -7,6 +7,8 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
     "lint:fix": "tsc && eslint --ignore-path .eslintignore --fix --ext .js,.ts",
+    "pre-commit-lint": "tsc && pnpm lint-staged",
+    "prettier": "prettier --ignore-path .gitignore \"src/**/*.+(js|jsx|json|ts|tsx)\"",
     "ci": "pnpm run lint && pnpm run build",
     "release": "pnpm run lint && pnpm run build && pnpm changeset publish",
     "prepare": "husky install"
@@ -25,6 +27,7 @@
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "husky": "^8.0.0",
+    "lint-staged": "^15.1.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },
