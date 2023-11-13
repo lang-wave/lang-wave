@@ -13,8 +13,32 @@
     "release": "pnpm run lint && pnpm run build && pnpm changeset publish",
     "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "lang-wave",
+    "internationalization",
+    "translation",
+    "localization",
+    "globalization",
+    "react",
+    "reactjs"
+  ],
+  "contributors": [
+    {
+      "name": "Tedy Gabriel Moisa",
+      "email": "moisatedy@gmail.com",
+      "url": "https://tedymoisa.it"
+    },
+    {
+      "name": "Kevin Agyeman",
+      "email": "kevinagyemann@gmail.com",
+      "url": "https://kevinagyeman.com"
+    }
+  ],
+  "homepage": "https://github.com/lang-wave/lang-wave",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lang-wave/lang-wave"
+  },
   "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
