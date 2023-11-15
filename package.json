@@ -1,21 +1,57 @@
 {
   "name": "lang-wave",
   "version": "0.0.2",
-  "description": "",
+  "description": "Language detector",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
+    "lint:fix": "tsc && eslint --ignore-path .eslintignore --fix --ext .js,.ts",
+    "pre-commit-lint": "tsc && pnpm lint-staged",
+    "prettier": "prettier --ignore-path .gitignore \"src/**/*.+(js|jsx|json|ts|tsx)\"",
     "ci": "pnpm run lint && pnpm run build",
-    "release": "pnpm run lint && pnpm run build && pnpm changeset publish"
+    "release": "pnpm run lint && pnpm run build && pnpm changeset publish",
+    "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "lang-wave",
+    "internationalization",
+    "translation",
+    "localization",
+    "globalization",
+    "react",
+    "reactjs"
+  ],
+  "contributors": [
+    {
+      "name": "Tedy Gabriel Moisa",
+      "email": "moisatedy@gmail.com",
+      "url": "https://tedymoisa.it"
+    },
+    {
+      "name": "Kevin Agyeman",
+      "email": "kevinagyemann@gmail.com",
+      "url": "https://kevinagyeman.com"
+    }
+  ],
+  "homepage": "https://github.com/lang-wave/lang-wave",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lang-wave/lang-wave"
+  },
   "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "@types/node": "^20.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.1.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },
